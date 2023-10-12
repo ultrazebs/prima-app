@@ -44,8 +44,6 @@ else if (miaAuto.fuelLevel != 0 && bomber1 == "no")
     Console.WriteLine("Car is still running bro!");
 
 
-Console.ReadLine();
-
 class Auto
 {
     //tipi personalizzati
@@ -66,13 +64,39 @@ class Auto
     private bool engine;
     public int fuelLevel;
 
+
+
     /// <summary>
-    /// 
+    /// stampa la descrizione del veicolo
     /// </summary>
     public void stampaDescrizione()
     {
         Console.WriteLine(GeneraDescrizione());
     }
+
+
+
+    /// <summary>
+    /// stampa lo stato attuale del veicolo
+    /// </summary>
+    public void stampaStato()
+    {
+
+    }
+
+
+    public string generaStato()
+    {
+        string result;
+        result = $"Carburante: {this.fuelLevel}";
+        if (this.engine)
+            result += " accesa";
+        else
+            result += "spenta";
+
+        return result;
+    }
+
 
     /// <summary>
     /// 
@@ -96,6 +120,8 @@ class Auto
         return result;
     }
 
+
+
     /// <summary>
     ///Costruttore con argomenti per la classe Auto che valorizza le proprietà utilizzando i valori passati come argomento
     /// </summary>
@@ -113,6 +139,9 @@ class Auto
     {
         return engine;
     }
+    
+    
+    
     /// <summary>
     /// metodo che setta il valore di engine a true
     /// </summary>
@@ -120,6 +149,9 @@ class Auto
     {
         this.engine = true;
     }
+    
+    
+    
     /// <summary>
     /// metodo che setta il valore di engine a false
     /// </summary>
