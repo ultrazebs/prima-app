@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-/*
+﻿/*
  * L'app deve modellare un'automobile, per falo deve registrare le informazioni relative a:
  * - marca;
  * - modello;
@@ -17,7 +14,7 @@ Auto miaAuto;
 
 miaAuto = new Auto("Bugatti", "Chiron Pur Sport", "Bronzo", Auto.motore.benzina);
 
-miaAuto.stampa();
+miaAuto.stampaDescrizione();
 
 
 
@@ -38,16 +35,37 @@ class Auto
     public string colore;
     public motore tipoMotore;
 
-    public void stampa()
+    /// <summary>
+    /// 
+    /// </summary>
+    public void stampaDescrizione()
     {
-        // stampo le caratteristiche dell'auto:
-        Console.WriteLine("marca: " + this.marca);
-        Console.WriteLine("modello: " + this.modello);
-        Console.WriteLine("colore: " + this.colore);
-        Console.WriteLine("tipoMotore: " + this.tipoMotore);
-        Console.WriteLine("\n_______________________________\n");
+        Console.WriteLine(GeneraDescrizione());
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public string GeneraDescrizione()
+    {
+        // dichiarazione variabili
+        string result;
+
+        // costruisco il risultato concatenando le descrizioni
+        result = "marca: " + this.marca + "\n";
+        result += $"modello:  {this.modello}\n";
+        result += "colore: " + this.colore + " \n";
+        result += "tipo motore: " + this.tipoMotore + "\n";
+        result += "\n_______________________________\n";
+
+        // restituisco il risultato
+        return result;
+    }
+
+    /// <summary>
+    ///Costruttore con argomenti per la classe Auto che valorizza le proprietà utilizzando i valori passati come argomento
+    /// </summary>
     public Auto(string marca, string modello, string colore, motore tipoMotore)
     {
         this.marca = marca;
