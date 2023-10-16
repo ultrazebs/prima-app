@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testApp", "Test app\testApp.csproj", "{71883839-20CF-44AE-A533-5638FE1BC9C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "Elementi di soluzione", "{E161D19A-9EAD-4FE8-A7BD-BF06C2486D13}"
-	ProjectSection(SolutionItems) = preProject
-		Auto.cs = Auto.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

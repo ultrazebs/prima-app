@@ -79,6 +79,10 @@ class Auto
     }
 
 
+    public Auto()
+    {
+
+    }
 
     /// <summary>
     ///Costruttore con argomenti per la classe Auto che valorizza le proprietà utilizzando i valori passati come argomento
@@ -140,19 +144,23 @@ class Auto
             switch (choice)
             {
                 case 0:
+                    // accendo l'auto
                     this.accendi();
                     this.stampaDescrizione();
                     break;
                 case 1:
+                    // spengo l'auto
                     this.spegni();
                     this.stampaDescrizione();
                     break;
                 case 2:
+                    // rifornisco l'auto -> carburante settato a 100
                     this.fuelLevel = 100;
                     Console.WriteLine("entrato nel case 2");
                     this.stampaDescrizione();
                     break;
                 case 3:
+                    // esco
                     break;
                 default:
                     break;

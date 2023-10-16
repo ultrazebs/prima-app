@@ -11,6 +11,9 @@
  * 
  */
 
+using Test_app;
+using testApp;
+
 testApp.Auto miaAuto;
 
 
@@ -19,7 +22,10 @@ int bomber0 = Convert.ToInt32(Console.ReadLine());
 
 miaAuto = new testApp.Auto("Bugatti", "Chiron Pur Sport", "Bronzo", testApp.Auto.motore.benzina, bomber0);
 
-miaAuto.menu();
+
+Autointerattiva miaAuto2;
+miaAuto2 = new Autointerattiva();
+miaAuto2.menu();
 /*
 Console.WriteLine("Do you want to turn on your car (I'll turn it on only if the fuel level is not 0)?");
 string bomber = Console.ReadLine();
