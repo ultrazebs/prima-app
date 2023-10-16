@@ -118,19 +118,25 @@ class Auto
         this.engine = false;
     }
 
+    /// <summary>
+    /// Metodo menu() che permette all'utente di scegliere fra varie opzioni possibili per la macchina
+    /// </summary>
     public void menu()
     {
         int choice;
         
         do
         {
+            // stampo il menu
             Console.WriteLine("Scegli tra le seguenti opzioni:");
             Console.WriteLine("0) Accendi;");
             Console.WriteLine("1) spegni;");
             Console.WriteLine("2) Rifornisci;");
             Console.WriteLine("3) Esci;");
+            // prendo in input la risposta(scelta)
             choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(choice);
+            // associo la scelta alle varie opzioni
             switch (choice)
             {
                 case 0:
