@@ -13,11 +13,14 @@
 
 testApp.Auto miaAuto;
 
+
 Console.WriteLine("On a scale from 0 to 100, how much fuel do you have in your tank?");
 int bomber0 = Convert.ToInt32(Console.ReadLine());
 
 miaAuto = new testApp.Auto("Bugatti", "Chiron Pur Sport", "Bronzo", testApp.Auto.motore.benzina, bomber0);
 
+miaAuto.menu();
+/*
 Console.WriteLine("Do you want to turn on your car (I'll turn it on only if the fuel level is not 0)?");
 string bomber = Console.ReadLine();
 if (miaAuto.fuelLevel != 0 && bomber == "yes")
@@ -43,5 +46,6 @@ if (miaAuto.fuelLevel != 0 && bomber1 == "yes")
     
 else if (miaAuto.fuelLevel != 0 && bomber1 == "no")
     Console.WriteLine("Car is still running bro!");
+*/
 
 

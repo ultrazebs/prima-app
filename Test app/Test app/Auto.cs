@@ -117,6 +117,44 @@ class Auto
     {
         this.engine = false;
     }
+
+    public void menu()
+    {
+        int choice = 0;
+        Console.WriteLine(choice);
+        do
+        {
+            Console.WriteLine("Scegli tra le seguenti opzioni:");
+            Console.WriteLine("0) Accendi;");
+            Console.WriteLine("1) spegni;");
+            Console.WriteLine("2) Rifornisci;");
+            Console.WriteLine("3) Esci;");
+            choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(choice);
+            switch (choice)
+            {
+                case 0:
+                    this.accendi();
+                    Console.WriteLine("Case 0");
+                    break;
+                case 1:
+                    this.spegni();
+                    break;
+                case 2:
+                    this.fuelLevel = 100;
+                    Console.WriteLine("entrato nel case 2");
+                    this.stampaDescrizione();
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
+        }
+        while (choice != 3);
+
+        
+    }
 }
 
 // end of class Auto
