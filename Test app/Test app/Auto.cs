@@ -120,8 +120,8 @@ class Auto
 
     public void menu()
     {
-        int choice = 0;
-        Console.WriteLine(choice);
+        int choice;
+        
         do
         {
             Console.WriteLine("Scegli tra le seguenti opzioni:");
@@ -135,10 +135,11 @@ class Auto
             {
                 case 0:
                     this.accendi();
-                    Console.WriteLine("Case 0");
+                    this.stampaDescrizione();
                     break;
                 case 1:
                     this.spegni();
+                    this.stampaDescrizione();
                     break;
                 case 2:
                     this.fuelLevel = 100;
